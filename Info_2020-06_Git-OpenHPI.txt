@@ -1,0 +1,27 @@
+Beispieltext für Git-Schulung
+
+Stand 2020 Juni
+
+"Erste Schritte"
+
+Git installiert (Git-2.27.0-64-bit.exe)
+
+=> Auf Desktop: "Git Bash" = Eingabeconsole für git?!
+
+In *Git Bash*:
+
+
+ + in Schulungsverzeichnis navigiert: +
+
+*cd {Pfadnamen mit / statt\ }* ENTER
+
+
+ + Git repository angelegt: +
+
+*git init* ENTER
+
+
+ + Dateien dem Repository zufügen: +
+
+*git add {Dateiname}*
+
