@@ -24,4 +24,18 @@ In *Git Bash*:
  + Dateien dem Repository zufügen: +
 
 *git add {Dateiname}*
+damit wird die Datei nur markiert,
+ dass sie zugefügt werden soll
+=> STAGED
+
+*git commit*
+alle markierten Dateien werden zum Repository zugefügt
+=> COMMIT
+
+
+Wenn ich eine Datei nun ändere
+(oder eine neue anlege) dann gilt diese als
+=> MODIFIED
+mit *git add* und *git commit* wird sie erst "gespeichert"
+
 
