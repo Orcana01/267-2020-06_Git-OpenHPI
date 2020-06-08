@@ -1,4 +1,4 @@
-Beispieltext für Git-Schulung
+Beispieltext fÃ¼r Git-Schulung
 
 Stand 2020 Juni
 
@@ -6,7 +6,7 @@ Stand 2020 Juni
 
 Git installiert (Git-2.27.0-64-bit.exe)
 
-=> Auf Desktop: "Git Bash" = Eingabeconsole für git?!
+=> Auf Desktop: "Git Bash" = Eingabeconsole fÃ¼r git?!
 
 In *Git Bash*:
 
@@ -21,39 +21,39 @@ In *Git Bash*:
 *git init* ENTER
 
 
- + Dateien dem Repository zufügen: +
+ + Dateien dem Repository zufÃ¼gen: +
 
 *git add {Dateiname}*
 damit wird die Datei nur markiert,
- dass sie zugefügt werden soll
+ dass sie zugefÃ¼gt werden soll
 => STAGED
 
 *git commit*
-alle markierten Dateien werden zum Repository zugefügt
+alle markierten Dateien werden zum Repository zugefÃ¼gt
 => COMMIT
 
 
-Wenn ich eine Datei nun ändere
+Wenn ich eine Datei nun Ã¤ndere
 (oder eine neue anlege) dann gilt diese als
 => MODIFIED
 mit *git add* und *git commit* wird sie erst "gespeichert"
 
 
 Mit *git status* kann ich den STATUS der
-einzelnen Dateien des ORDNERS überprüfen
+einzelnen Dateien des ORDNERS Ã¼berprÃ¼fen
 
 
-Um dann tatsächlich Online etwas zu haben:
+Um dann tatsÃ¤chlich Online etwas zu haben:
  o GIThub oder lab... Account einrichten
  o neues Projekt dort anlegen
  o URL des Projekts kann hier dann rauskopiert werden
- o In GitHub sind auch die zwei Befehle zur Verknüpfung
-=> Verknüpfung mit lokalem Repository:
+ o In GitHub sind auch die zwei Befehle zur VerknÃ¼pfung
+=> VerknÃ¼pfung mit lokalem Repository:
 
 Im Lokalen Git eingeben:
 git remote add GitWs https://github.com/Orcana01/267-2020-06_Git-OpenHPI.git
 dabei ist
-GitWs der erdachte Name für das Repository
+GitWs der erdachte Name fÃ¼r das Repository
 und 
 https: ... der kopierte Pfad aus GitHub
 
@@ -64,5 +64,9 @@ dabei ist GitWs wohl die Quelle und master wohl das Ziel
 mit dem Befehl
 git config --list
 und durch die Aktualisierung der GitHub-Internet-Seite
-kann die korrekte Verbindung überprüft werden
+kann die korrekte Verbindung Ã¼berprÃ¼ft werden
 
+IM WEITEREN REICHT ES DANN, wenn man Ã„nderungen lokal durchgefÃ¼hrt hat,
+den Befehl
+git push
+zu verwenden.
