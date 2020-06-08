@@ -41,3 +41,28 @@ mit *git add* und *git commit* wird sie erst "gespeichert"
 
 Mit *git status* kann ich den STATUS der
 einzelnen Dateien des ORDNERS überprüfen
+
+
+Um dann tatsächlich Online etwas zu haben:
+ o GIThub oder lab... Account einrichten
+ o neues Projekt dort anlegen
+ o URL des Projekts kann hier dann rauskopiert werden
+ o In GitHub sind auch die zwei Befehle zur Verknüpfung
+=> Verknüpfung mit lokalem Repository:
+
+Im Lokalen Git eingeben:
+git remote add GitWs https://github.com/Orcana01/267-2020-06_Git-OpenHPI.git
+dabei ist
+GitWs der erdachte Name für das Repository
+und 
+https: ... der kopierte Pfad aus GitHub
+
+nun den Befehl:
+git push -u GitWs master
+dabei ist GitWs wohl die Quelle und master wohl das Ziel
+
+mit dem Befehl
+git config --list
+und durch die Aktualisierung der GitHub-Internet-Seite
+kann die korrekte Verbindung überprüft werden
+
