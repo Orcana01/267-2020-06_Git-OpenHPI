@@ -39,3 +39,5 @@ Wenn ich eine Datei nun ändere
 mit *git add* und *git commit* wird sie erst "gespeichert"
 
 
+Mit *git status* kann ich den STATUS der
+einzelnen Dateien des ORDNERS überprüfen
