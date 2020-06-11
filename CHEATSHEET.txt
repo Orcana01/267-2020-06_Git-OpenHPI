@@ -1,0 +1,131 @@
++ pwd +
+
+Anzeige des aktuellen Verzeichnises/Ordners
+"print working directory"
+
+
++ ls +
+
+Auflistung des Inhalts des aktuellen Verzeichnisses
+
+ -l
+ Inhalt wird untereinander aufgelistet
+
+ -a
+ Alle Dateien und Infos werden angezeigt
+
+ => -la
+ Alle Dateien und Infos werden untereinander aufgelistet
+
+
++ cd {Unterverzeichnisname}/{Unterunterverzeichnisname} +
+
+In ein Unterverzeichnis (Pfad) wechseln
+"change directory"
+ 
+ cd ..
+ Wieder eine Ebene höher gehen
+
+ cd ~
+ Wieder in das "Hauptverzeichnis"/"ganz oben" gehen
+
+=========================================================
+
++ git config --list
+
+Metadaten von Git anzeigen lassen
+
+ --global user.email {eigene E-Mail-Adresse}
+ eigene E-Mail-Adresse in den Metadaten hinterlegen
+
+ --global user.name {Benutzername}
+ eigenen Namen in den Metadaten hinterlegen,
+ damit andere wissen, was man commited+gepusht hat
+
++ git init +
+
+Repository im aktuellen Verzeichnis/Ordner anlegen
+
+=========================================================
+
++ git status +
+
+Anzeige des Status des aktuellen Repositories
+
+
++ git add {Dateiname} +
+
+Eine Datei der Staging-Area hinzufügen
+
+ git add .
+ Alle Dateien des aktuellen Verzeichnises stagen
+
+
++ git restore {Dateiname} +
+
+Die geänderte Datei wird durch die letzte, im Repo vor-
+handene Version ersetzt
+ 
+ git restore --staged {Dateiname}
+ die gestagete Datei wird wieder aus der
+ Staging-Area entfernt
+
+
++ git commit +
+
+ Datei commiten
+
+ -a 
+ Dateien, welche noch nicht gestaged sind commiten
+ (also erst git add, dann git commit ausführen)
+
+ -m "info"
+ Der Text in "" wird dem Commit hinzugefügt
+
+ --amend
+ wenn man beim letzten Commit was vergessen hat...
+
+
+
++ git branch +
+
+Liste der vorhandenen Branches
+
+ {Branchname für neuen Branch}
+ Der neue Branch wird angelegt
+
+
++ git checkout {Branchname}
+
+Wechseln in den angegebenen Branch
+
+ git checkout -b {Branchname für einen NEUEN Branch}
+ Es wird ein neuer Branch angelegt und 
+ dann wird gleich in den neuen Branch gewechselt
+
+
++ git merge {Name des zu hinzufügenden Branches} +
+
+Der angegebene Branch wird dem Branch in dem man sich 
+befindet hinzugefügt
+
+=======================================================
+
+Für Onlineverwaltung in z.B. GitHub-Projekt
+
++ git remote +
+
+
+
++ git push +
+
+
+
++ git fetch +
+
+
+
++ git pull +
+
+Ist die Kombination aus *git fetch* und *git merge*
+
