@@ -29,11 +29,23 @@ In ein Unterverzeichnis (Pfad) wechseln
  cd ~
  Wieder in das "Hauptverzeichnis"/"ganz oben" gehen
 
+
++ touch {Dateiname.Endung} (oder > {datei.typ}) +
+
+Eine neue (leere) Datei wird angelegt
+
++ rm {Dateiname} +
+
+Die Datei wird komplett gelöscht
+
 =========================================================
 
-+ git config --list
++ git config +
 
-Metadaten von Git anzeigen lassen
+ Diverse Metadaten, Standardwerte &Co von anzeigen lassen
+
+ --list
+ Metadaten von Git anzeigen lassen
 
  --global user.email {eigene E-Mail-Adresse}
  eigene E-Mail-Adresse in den Metadaten hinterlegen
@@ -61,6 +73,12 @@ Eine Datei der Staging-Area hinzufügen
  Alle Dateien des aktuellen Verzeichnises stagen
 
 
++ git rm {Dateiname} +
+
+Entfernen einer Datei aus dem Repository
+OHNE sie zu löschen...
+
+
 + git restore {Dateiname} +
 
 Die geänderte Datei wird durch die letzte, im Repo vor-
@@ -75,9 +93,11 @@ handene Version ersetzt
 
  Datei commiten
 
- -a 
+ -a ====
  Dateien, welche noch nicht gestaged sind commiten
  (also erst git add, dann git commit ausführen)
+ !!! Nur bei Dateien, die bereits commitet wurden
+ und jetzt eben nur noch geändert wurden !!!
 
  -m "info"
  Der Text in "" wird dem Commit hinzugefügt
@@ -86,13 +106,48 @@ handene Version ersetzt
  wenn man beim letzten Commit was vergessen hat...
 
 
++ git log +
+
+Auflistung aller Commits
+ (können dann mit "Q" wieder "abgebrochen" werden)
+
+ -p (oder --patch)
+ Unterschied vor und nach dem commit
+
+ -{zahl} (z.B.: -2)
+ nur die letzten {zahl} Einträge
+ (=>Beispiel: nur die letzten Beiden Einträge)
+
+ --stat
+ eine kurze Statistik zu den Commits
+ (z.B. Anzahl der Einfügungen und Löschungen)
+
+ --pretty
+ Anzeige in einem anderen Format?!
+
+ --graph
+ bildliche Darstellung der Branches
+ (macht also nur Sinn, wenn man mit Branches arbeitet)
+
+ --decorate
+ ?!
+
+ --oneline
+ nur Angabe einer verkürzten Prüfsumme,
+ ggf des Branches und
+ der Commit-Message
+
+
 
 + git branch +
 
 Liste der vorhandenen Branches
 
- {Branchname für neuen Branch}
+ git branch {Branchname für neuen Branch}
  Der neue Branch wird angelegt
+
+ -d {Branchname}
+ Branch löschen
 
 
 + git checkout {Branchname}
@@ -107,7 +162,7 @@ Wechseln in den angegebenen Branch
 + git merge {Name des zu hinzufügenden Branches} +
 
 Der angegebene Branch wird dem Branch in dem man sich 
-befindet hinzugefügt
+befindet hinzugefügt/mit ihm zusammengeführt
 
 =======================================================
 
@@ -115,6 +170,8 @@ Für Onlineverwaltung in z.B. GitHub-Projekt
 
 + git remote +
 
+
++ git clone +
 
 
 + git push +
@@ -128,4 +185,17 @@ Für Onlineverwaltung in z.B. GitHub-Projekt
 + git pull +
 
 Ist die Kombination aus *git fetch* und *git merge*
+
+
+=======================================================
+
+git log -1
+git log -1 --decorate=short # kein Unterschied zum Standardverhalten oben
+git log -1 --decorate=full  # der Pfad ist etwas laenger
+
+Und wenn dir der laengere Pfad gefaellt, kannst du diese Anzeige als Standardverhalten speichern mit
+
+git config log.decorate full           # fuer das repo, in dem du dich gerade befindest
+git config --global log.decorate full  # fuer alle repositories auf deinem Computer
+
 
