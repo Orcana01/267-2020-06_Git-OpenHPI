@@ -69,7 +69,7 @@ Anzeige des Status des aktuellen Repositories
 
 Eine Datei der Staging-Area hinzufügen
 
- git add .
+ git add . (oder "git add *" ?!)
  Alle Dateien des aktuellen Verzeichnises stagen
 
 
@@ -88,6 +88,20 @@ handene Version ersetzt
  die gestagete Datei wird wieder aus der
  Staging-Area entfernt
 
+ ebenso?!?!
++ git reset HEAD {Dateiname} +
+  geänderte Datei aus Staging-Area entfernen
+
+  git reset HEAD~
+  ~ => commit vor dem letzten commit
+  => commit vor dem letzten commit wird wieder aktiviert
+
+  git reset HEAD~~
+  commit zwei vor dem letzten commit
+
+  git reset HEAD {Prüfsumme des commits}
+
+
 
 + git commit +
 
@@ -104,6 +118,10 @@ handene Version ersetzt
 
  --amend
  wenn man beim letzten Commit was vergessen hat...
+ ersetzt den letzten commit...
+
+ --amend -m 
+ einfach nur die letzte commit-Message ersetzen
 
 
 + git log +
@@ -158,6 +176,12 @@ Wechseln in den angegebenen Branch
  Es wird ein neuer Branch angelegt und 
  dann wird gleich in den neuen Branch gewechselt
 
+ git checkout -- {Dateiname}
+ verwerfen der letzten Änderung in der Datei
+ => letzte Dateiversion (die commited wurde wieder aktiV)
+ => d.h. alle Änderungen seit letztem commit
+           für immer weg
+
 
 + git merge {Name des zu hinzufügenden Branches} +
 
@@ -198,4 +222,8 @@ Und wenn dir der laengere Pfad gefaellt, kannst du diese Anzeige als Standardver
 git config log.decorate full           # fuer das repo, in dem du dich gerade befindest
 git config --global log.decorate full  # fuer alle repositories auf deinem Computer
 
+=======================================================
 
+Arbeitsverzeichnis = da habe ich die lokalen Dateien
+Staging Area	   = -"-, die committed werden sollen
+HEAD		   = Schnappschuss des letzten commits
