@@ -101,11 +101,21 @@ handene Version ersetzt
 
   git reset HEAD {Prüfsumme des commits}
 
+  git reset --soft HEAD~
+  Nur der HEAD (also SChnappschuss) wird auf den 
+  vorletzen commit zurückgesetzt
+
+  git reset --mixed HEAD~
+   =  git reset HEAD~
+  = --soft + Staging Area auf ... zurücksetzen
+
+  git reset --hard
+  = --mixed + Arbeitsverzeichnis auf ... zurücksetzen
 
 
 + git commit +
 
- Datei commiten
+ Datei commiten, d.h. ein Schnappschuss wird erstellt
 
  -a ====
  Dateien, welche noch nicht gestaged sind commiten
