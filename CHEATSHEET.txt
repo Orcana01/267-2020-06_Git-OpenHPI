@@ -208,6 +208,7 @@ Für Onlineverwaltung in z.B. GitHub-Projekt
 + git clone +
 
 
+
 + git push +
 
 
@@ -217,7 +218,7 @@ Für Onlineverwaltung in z.B. GitHub-Projekt
 
 
 + git pull +
-
+k
 Ist die Kombination aus *git fetch* und *git merge*
 
 
