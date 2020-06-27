@@ -204,6 +204,8 @@ Für Onlineverwaltung in z.B. GitHub-Projekt
 
 + git remote +
 
+	-v zeigt mir die vorhandene/verknüpfte URL
+
 
 + git clone +
 
